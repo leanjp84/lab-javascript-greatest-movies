@@ -2005,3 +2005,15 @@ const movies = [
 if (typeof module !== 'undefined') {
   module.exports = movies;
 }
+
+const getAllDirectors = movies.map(function (directors) {
+  return directors.director;
+});
+console.log(getAllDirectors)
+
+
+
+const howManyMovies = movies.filter(function (steven) {
+  return steven.director.includes("Steven Spielberg") && steven.genre.includes("Drama");
+});
+console.log(howManyMovies);
